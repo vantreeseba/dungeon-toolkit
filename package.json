@@ -22,7 +22,7 @@
   },
   "scripts": {
     "watch": "npm-watch test",
-    "test": "nyc -r text-summary --all mocha -u exports",
+    "test": "nyc --all mocha -u exports",
     "precommit": "npm run test"
   },
   "author": "vantreeseba@gmail.com",
