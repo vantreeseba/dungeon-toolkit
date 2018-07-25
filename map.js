@@ -15,19 +15,6 @@ class Map {
   }
 
   /**
-   * Fill the map with two values, randomly.
-   *
-   * @param {Number} [wall=0] The first (wall) value.
-   * @param {Number} [floor=1] The second (floor) value.
-   * @param {Number} [percent=0] The percent of map that should be walls.
-   */
-  fill(wall = 0, floor = 1, percent = 0) {
-    this.values = this.values.map(
-      () => (Math.random() <= percent ? wall : floor)
-    );
-  }
-
-  /**
    * Returns an x,y coord for a index in the array representing the map.
    * @param {Number} i The index to turn into an x,y coord.
    * @return {Object} x,y coord.

@@ -31,14 +31,12 @@ class BSPGenerator extends Generator {
     }
 
     if (splitHeight) {
-      let splitAt =
-        Math.floor(Math.random() * (node.h - this.minH * 2 + 1)) + this.minH;
+      let splitAt = Math.floor(Math.random() * (node.h - this.minH * 2 + 1)) + this.minH;
       let rHeight = node.h - splitAt;
       node.l = this.makeNode(node.x, node.y, node.w, splitAt);
       node.r = this.makeNode(node.x, node.y + splitAt, node.w, rHeight);
     } else {
-      let splitAt =
-        Math.floor(Math.random() * (node.w - this.minW * 2 + 1)) + this.minW;
+      let splitAt = Math.floor(Math.random() * (node.w - this.minW * 2 + 1)) + this.minW;
       let rWidth = node.w - splitAt;
       node.l = this.makeNode(node.x, node.y, splitAt, node.h);
       node.r = this.makeNode(node.x + splitAt, node.y, rWidth, node.h);

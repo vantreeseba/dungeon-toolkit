@@ -1,5 +1,5 @@
 const assert = require('chai').assert;
-const Map = require('../Map');
+const Map = require('../map');
 
 module.exports = {
   'Map': {
@@ -23,29 +23,29 @@ module.exports = {
         assert.equal(8, neighbors.length);
       },
     },
-    'fill': {
-      'should fill map with wall when given 1': () => {
-        const map = new Map(16, 16);
-        map.fill(0, 1, 1);
+    // 'fill': {
+    //   'should fill map with wall when given 1': () => {
+    //     const map = new Map(16, 16);
+    //     map.fill(0, 1, 1);
 
-        const wallTiles = map.values.filter(x => x === 0);
-        assert.equal(map.values.length, wallTiles.length);
-      },
-      'should fill map with floor when given 0': () => {
-        const map = new Map(16, 16);
-        map.fill();
+    //     const wallTiles = map.values.filter(x => x === 0);
+    //     assert.equal(map.values.length, wallTiles.length);
+    //   },
+    //   'should fill map with floor when given 0': () => {
+    //     const map = new Map(16, 16);
+    //     map.fill();
 
-        const wallTiles = map.values.filter(x => x === 1);
-        assert.equal(map.values.length, wallTiles.length);
-      },
-      'should fill map with about half floor when given 0.5': () => {
-        const map = new Map(16, 16);
-        map.fill(0, 1, 0.5);
+    //     const wallTiles = map.values.filter(x => x === 1);
+    //     assert.equal(map.values.length, wallTiles.length);
+    //   },
+    //   'should fill map with about half floor when given 0.5': () => {
+    //     const map = new Map(16, 16);
+    //     map.fill(0, 1, 0.5);
 
-        const wallTiles = map.values.filter(x => x === 1);
-        assert.closeTo(wallTiles.length, map.values.length/2, 20);
-      }
-    },
+    //     const wallTiles = map.values.filter(x => x === 1);
+    //     assert.closeTo(wallTiles.length, map.values.length/2, 20);
+    //   }
+    // },
     'indexToXY' : {
       'should return correct index': () => {
         const map = new Map(16, 16);

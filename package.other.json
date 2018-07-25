@@ -1,6 +1,6 @@
 {
-  "name": "dungeon-toolkit",
-  "version": "0.1.0",
+  "name": "infinite-poisson-disc-sampler",
+  "version": "0.11.0",
   "description": "",
   "main": "index.js",
   "devDependencies": {
@@ -20,6 +20,12 @@
       "quiet": true
     }
   },
+  "nyc": {
+    "exclude": [
+      "docs",
+      "test"
+    ]
+  },
   "scripts": {
     "watch": "npm-watch test",
     "test": "nyc -r text --all mocha -u exports",
@@ -30,5 +36,8 @@
     "postversion": "git push && git push --tags"
   },
   "author": "vantreeseba@gmail.com",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "mersenne-twister": "^1.1.0"
+  }
 }
