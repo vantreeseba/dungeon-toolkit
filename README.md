@@ -3,42 +3,61 @@ A toolkit of level generation and analysis utilities.
 ## Classes
 
 <dl>
-<dt><a href="#Generator">Generator</a></dt>
-<dd><p>Generator</p>
+<dt><a href="#Fill">Fill</a></dt>
+<dd><p>A collection of kinds of flood fills.</p>
 </dd>
 <dt><a href="#Map">Map</a></dt>
 <dd><p>A class representing a grid map.</p>
 </dd>
 </dl>
 
-## Functions
+<a name="Fill"></a>
 
-<dl>
-<dt><a href="#distanceFill">distanceFill()</a></dt>
-<dd><p>Random utils for supporting module.</p>
-</dd>
-<dt><a href="#floodFill">floodFill(map, x, y, value)</a> ⇒ <code>Array</code></dt>
-<dd><p>Return a list of tiles that recursively
-touch the given tile and have the given value.</p>
-</dd>
-</dl>
-
-<a name="Generator"></a>
-
-## Generator
-Generator
+## Fill
+A collection of kinds of flood fills.
 
 **Kind**: global class  
-<a name="new_Generator_new"></a>
 
-### new Generator(map, [config])
-constructor
+* [Fill](#Fill)
+    * [.random(map, [wall], [floor], [percent])](#Fill.random)
+    * [.distance()](#Fill.distance)
+    * [.flood(map, x, y, value)](#Fill.flood) ⇒ <code>Array</code>
 
+<a name="Fill.random"></a>
 
-| Param | Default |
-| --- | --- |
-| map |  | 
-| [config] | <code>{}</code> | 
+### Fill.random(map, [wall], [floor], [percent])
+Fill the map with two values, randomly.
+
+**Kind**: static method of [<code>Fill</code>](#Fill)  
+
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| map | [<code>Map</code>](#Map) |  | The map to get tiles from. |
+| [wall] | <code>Number</code> | <code>0</code> | The first (wall) value. |
+| [floor] | <code>Number</code> | <code>1</code> | The second (floor) value. |
+| [percent] | <code>Number</code> | <code>0</code> | The percent of map that should be walls. |
+
+<a name="Fill.distance"></a>
+
+### Fill.distance()
+Random utils for supporting module.
+
+**Kind**: static method of [<code>Fill</code>](#Fill)  
+<a name="Fill.flood"></a>
+
+### Fill.flood(map, x, y, value) ⇒ <code>Array</code>
+Return a list of tiles that recursively
+touch the given tile and have the given value.
+
+**Kind**: static method of [<code>Fill</code>](#Fill)  
+**Returns**: <code>Array</code> - The list of points and their values.  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| map | [<code>Map</code>](#Map) | The map to get tiles from. |
+| x | <code>Number</code> | The x coord of the tile. |
+| y | <code>Number</code> | The y coord of the tile. |
+| value | <code>Number</code> | The tile value/number to match. |
 
 <a name="Map"></a>
 
@@ -49,7 +68,6 @@ A class representing a grid map.
 
 * [Map](#Map)
     * [new Map(w, h)](#new_Map_new)
-    * [.fill([wall], [floor], [percent])](#Map+fill)
     * [.indexToXY(i)](#Map+indexToXY) ⇒ <code>Object</code>
     * [.xyToIndex(x, y)](#Map+xyToIndex) ⇒ <code>Number</code>
     * [.set(x, y, val)](#Map+set)
@@ -66,19 +84,6 @@ Construct a map.
 | --- | --- | --- |
 | w | <code>Number</code> | The width of the map. |
 | h | <code>Number</code> | The height of the map. |
-
-<a name="Map+fill"></a>
-
-### map.fill([wall], [floor], [percent])
-Fill the map with two values, randomly.
-
-**Kind**: instance method of [<code>Map</code>](#Map)  
-
-| Param | Type | Default | Description |
-| --- | --- | --- | --- |
-| [wall] | <code>Number</code> | <code>0</code> | The first (wall) value. |
-| [floor] | <code>Number</code> | <code>1</code> | The second (floor) value. |
-| [percent] | <code>Number</code> | <code>0</code> | The percent of map that should be walls. |
 
 <a name="Map+indexToXY"></a>
 
@@ -144,26 +149,4 @@ Get all neighbors for the tile within dist.
 | x | <code>Number</code> |  | The x coord. |
 | y | <code>Number</code> |  | The y coord. |
 | [dist] | <code>Number</code> | <code>1</code> | The distance to find neighbors within. |
-
-<a name="distanceFill"></a>
-
-## distanceFill()
-Random utils for supporting module.
-
-**Kind**: global function  
-<a name="floodFill"></a>
-
-## floodFill(map, x, y, value) ⇒ <code>Array</code>
-Return a list of tiles that recursively
-touch the given tile and have the given value.
-
-**Kind**: global function  
-**Returns**: <code>Array</code> - The list of points and their values.  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| map | [<code>Map</code>](#Map) | The map to get tiles from. |
-| x | <code>Number</code> | The x coord of the tile. |
-| y | <code>Number</code> | The y coord of the tile. |
-| value | <code>Number</code> | The tile value/number to match. |
 
