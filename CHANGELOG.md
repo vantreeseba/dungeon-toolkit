@@ -1,5 +1,12 @@
+## <small>0.2.1 (2018-07-27)</small>
+
+* Add npm ignore ([be59079](https://github.com/vantreeseba/dungeon-toolkit/commit/be59079))
+
+
+
 ## 0.2.0 (2018-07-27)
 
+* 0.2.0 ([ff41156](https://github.com/vantreeseba/dungeon-toolkit/commit/ff41156))
 * Add generators and map class ([4184c2a](https://github.com/vantreeseba/dungeon-toolkit/commit/4184c2a))
 * Add npm ignore to clean up module ([e5ebdc5](https://github.com/vantreeseba/dungeon-toolkit/commit/e5ebdc5))
 * Add readme and docs builder ([0831354](https://github.com/vantreeseba/dungeon-toolkit/commit/0831354))
