@@ -1,5 +1,12 @@
+## <small>0.2.2 (2018-07-27)</small>
+
+* Fix npm ignore ([7a475d6](https://github.com/vantreeseba/dungeon-toolkit/commit/7a475d6))
+
+
+
 ## <small>0.2.1 (2018-07-27)</small>
 
+* 0.2.1 ([cb9466e](https://github.com/vantreeseba/dungeon-toolkit/commit/cb9466e))
 * Add npm ignore ([be59079](https://github.com/vantreeseba/dungeon-toolkit/commit/be59079))
 
 
