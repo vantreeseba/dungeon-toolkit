@@ -1,5 +1,12 @@
+## 0.3.0 (2018-08-03)
+
+* Add library export to webpack ([e06155d](https://github.com/vantreeseba/dungeon-toolkit/commit/e06155d))
+
+
+
 ## <small>0.2.2 (2018-07-27)</small>
 
+* 0.2.2 ([70d640a](https://github.com/vantreeseba/dungeon-toolkit/commit/70d640a))
 * Fix npm ignore ([7a475d6](https://github.com/vantreeseba/dungeon-toolkit/commit/7a475d6))
 
 
