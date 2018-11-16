@@ -25,6 +25,7 @@
     "test": {
       "patterns": [
         "test",
+        "test/**",
         "."
       ],
       "extensions": "js",
@@ -33,7 +34,7 @@
   },
   "scripts": {
     "watch": "npm-watch test",
-    "test": "nyc -r text --all mocha -u exports",
+    "test": "nyc -r text --all mocha --recursive -u exports",
     "build-dist": "webpack",
     "build-readme": "jsdoc2md -t README.hbs -f *.js > README.md",
     "build-changelog": "conventional-changelog -i CHANGELOG.md -s -r 0",

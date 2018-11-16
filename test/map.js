@@ -6,8 +6,6 @@ module.exports = {
     'getNeighbors' : {
       'on edge': () => {
         const map = new Map(4, 4);
-        map.set(0, 0, 1);
-        map.set(1, 0, 1);
 
         const neighbors = map.getNeighbors(0, 0);
 
@@ -15,8 +13,6 @@ module.exports = {
       },
       'in center': () => {
         const map = new Map(4, 4);
-        map.set(0, 0, 1);
-        map.set(1, 1, 1);
 
         const neighbors = map.getNeighbors(1, 1);
 
