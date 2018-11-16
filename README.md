@@ -1,64 +1,5 @@
 A toolkit of level generation and analysis utilities.
 
-## Classes
-
-<dl>
-<dt><a href="#Fill">Fill</a></dt>
-<dd><p>A collection of kinds of flood fills.</p>
-</dd>
-<dt><a href="#Map">Map</a></dt>
-<dd><p>A class representing a grid map.</p>
-</dd>
-</dl>
-
-<a name="Fill"></a>
-
-## Fill
-A collection of kinds of flood fills.
-
-**Kind**: global class  
-
-* [Fill](#Fill)
-    * [.random(map, [wall], [floor], [percent])](#Fill.random)
-    * [.distance()](#Fill.distance)
-    * [.flood(map, x, y, value)](#Fill.flood) ⇒ <code>Array</code>
-
-<a name="Fill.random"></a>
-
-### Fill.random(map, [wall], [floor], [percent])
-Fill the map with two values, randomly.
-
-**Kind**: static method of [<code>Fill</code>](#Fill)  
-
-| Param | Type | Default | Description |
-| --- | --- | --- | --- |
-| map | [<code>Map</code>](#Map) |  | The map to get tiles from. |
-| [wall] | <code>Number</code> | <code>0</code> | The first (wall) value. |
-| [floor] | <code>Number</code> | <code>1</code> | The second (floor) value. |
-| [percent] | <code>Number</code> | <code>0</code> | The percent of map that should be walls. |
-
-<a name="Fill.distance"></a>
-
-### Fill.distance()
-Random utils for supporting module.
-
-**Kind**: static method of [<code>Fill</code>](#Fill)  
-<a name="Fill.flood"></a>
-
-### Fill.flood(map, x, y, value) ⇒ <code>Array</code>
-Return a list of tiles that recursively
-touch the given tile and have the given value.
-
-**Kind**: static method of [<code>Fill</code>](#Fill)  
-**Returns**: <code>Array</code> - The list of points and their values.  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| map | [<code>Map</code>](#Map) | The map to get tiles from. |
-| x | <code>Number</code> | The x coord of the tile. |
-| y | <code>Number</code> | The y coord of the tile. |
-| value | <code>Number</code> | The tile value/number to match. |
-
 <a name="Map"></a>
 
 ## Map
@@ -68,6 +9,7 @@ A class representing a grid map.
 
 * [Map](#Map)
     * [new Map(w, h)](#new_Map_new)
+    * [.copy()](#Map+copy) ⇒ [<code>Map</code>](#Map)
     * [.indexToXY(i)](#Map+indexToXY) ⇒ <code>Object</code>
     * [.xyToIndex(x, y)](#Map+xyToIndex) ⇒ <code>Number</code>
     * [.set(x, y, val)](#Map+set)
@@ -85,6 +27,13 @@ Construct a map.
 | w | <code>Number</code> | The width of the map. |
 | h | <code>Number</code> | The height of the map. |
 
+<a name="Map+copy"></a>
+
+### map.copy() ⇒ [<code>Map</code>](#Map)
+Make a copy of this map.
+
+**Kind**: instance method of [<code>Map</code>](#Map)  
+**Returns**: [<code>Map</code>](#Map) - The copy of this map.  
 <a name="Map+indexToXY"></a>
 
 ### map.indexToXY(i) ⇒ <code>Object</code>

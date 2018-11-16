@@ -1,5 +1,12 @@
+## 0.4.0 (2018-11-16)
+
+* Add more tests, add copy map, add check for diagonals in neighbors, add openNeighborMap util, change ([f852774](https://github.com/vantreeseba/dungeon-toolkit/commit/f852774))
+
+
+
 ## 0.3.0 (2018-08-03)
 
+* 0.3.0 ([f395de4](https://github.com/vantreeseba/dungeon-toolkit/commit/f395de4))
 * Add library export to webpack ([e06155d](https://github.com/vantreeseba/dungeon-toolkit/commit/e06155d))
 
 
