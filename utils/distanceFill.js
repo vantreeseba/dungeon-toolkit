@@ -19,6 +19,8 @@ const distance = (map, wall = 0, passes = 1) => {
       if(isTouchingWall) {
         copy.set(x, y, dist);
         break;
+      } else if(!isTouchingWall && dist === passes) {
+        copy.set(x, y, passes);
       }
     }
   });

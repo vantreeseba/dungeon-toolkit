@@ -32,8 +32,6 @@ const getChokepoints = (map, {wall = 0, diagonals = true, threshold = 2, openMap
     if(moreOpenCount + sameOpenCount === totalCount) {
       return false;
     }
-
-    return moreOpenCount - wallCount === 0;
   };
 
   const chokepoints = openMap.values

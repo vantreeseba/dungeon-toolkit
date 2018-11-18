@@ -49,6 +49,5 @@ module.exports = {
     //   assert.equal(chokepoints[0].x, 2);
     //   assert.equal(chokepoints[0].y, 0);
     // },
-
   }
 };
